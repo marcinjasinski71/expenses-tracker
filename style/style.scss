@@ -22,8 +22,8 @@ header {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	margin-bottom: 40px;
-	height: 100px;
+	margin-bottom: 60px;
+	height: 150px;
 
 	h1 {
 		margin-bottom: 10px;
@@ -246,7 +246,7 @@ h2.title {
 //===========================================================================================
 // MEDIA
 
-@media (max-width: 576px) {
+@media (max-width: 376px) {
 	header {
 		height: 150px;
 		margin-bottom: 0;
