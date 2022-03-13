@@ -80,16 +80,46 @@
 
             <div class="style-selection">
                 <h2 class="title">Wybierz styl:</h2>
+                <div class="color-buttons">
+                    <button class="light"></button>
+                    <button class="dark"></button>
+                </div>
             </div>
-
-
-
         </section>
 
-
-
-
     </main>
+
+
+    <div class="add-transaction-panel">
+
+        <h2 class="title">Dodaj nową transakcję</h2>
+
+        <label for="name">Nazwa:</label>
+        <small>(podaj nazwę transakcji)</small>
+        <input type="text" id="name">
+
+
+        <label for="amount">Kwota:</label>
+        <small>( podaj kwotę transakcji - jeżeli dodajesz wydatek, postaw znak minusa na początku kwoty )</small>
+        <input type="number" id="amount">
+
+        <label for="category">Wybierz kategorię:</label>
+        <small>( [ + ] oznacza przychód, [ - ] oznacza wydatek )</small>
+        <select id="category">
+            <option value="none" selected disabled></option>
+            <option value="income">[ + ] Przychód</option>
+            <option value="shopping">[ - ] Zakupy</option>
+            <option value="food">[ - ] Jedzenie</option>
+            <option value="cinema">[ - ] Kino</option>
+        </select>
+
+        <div class="panel-buttons">
+            <button class="save"><i class="fas fa-save"></i> Zapisz</button>
+            <button class="cancel"><i class="far fa-window-close"></i> Anuluj</button>
+        </div>
+
+
+    </div>
 
 
     <!-- js -->
