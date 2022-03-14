@@ -295,6 +295,53 @@ h2.title {
 			font-size: 20px;
 		}
 	}
+	.add-transaction-panel {
+		display: flex;
+
+		h2.title {
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+		label {
+			margin-top: 20px;
+			font-size: 18px;
+		}
+		small {
+			font-size: 12px;
+			text-align: center;
+		}
+		input,
+		select {
+			width: 250px;
+			height: 40px;
+		}
+		input,
+		select,
+		button {
+			padding: 10px 20px;
+		}
+
+		.panel-buttons {
+			display: flex;
+			justify-content: center;
+			margin-top: 30px;
+		}
+		button {
+			margin: 0 30px;
+			font-size: 18px;
+			color: #fff;
+			border: 1px solid #fff;
+			background: none;
+			cursor: pointer;
+			transition: background-color 0.3s;
+			&:hover {
+				background-color: rgb(25, 27, 51);
+			}
+		}
+	}
+	.options {
+		width: 300px;
+	}
 }
 
 @media (max-width: 768px) {

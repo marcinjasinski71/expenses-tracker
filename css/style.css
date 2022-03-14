@@ -349,6 +349,58 @@ h2.title {
     margin-bottom: 40px;
     font-size: 20px;
   }
+  .add-transaction-panel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .add-transaction-panel h2.title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .add-transaction-panel label {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  .add-transaction-panel small {
+    font-size: 12px;
+    text-align: center;
+  }
+  .add-transaction-panel input,
+  .add-transaction-panel select {
+    width: 250px;
+    height: 40px;
+  }
+  .add-transaction-panel input,
+  .add-transaction-panel select,
+  .add-transaction-panel button {
+    padding: 10px 20px;
+  }
+  .add-transaction-panel .panel-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 30px;
+  }
+  .add-transaction-panel button {
+    margin: 0 30px;
+    font-size: 18px;
+    color: #fff;
+    border: 1px solid #fff;
+    background: none;
+    cursor: pointer;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+  }
+  .add-transaction-panel button:hover {
+    background-color: #191b33;
+  }
+  .options {
+    width: 300px;
+  }
 }
 
 @media (max-width: 768px) {
