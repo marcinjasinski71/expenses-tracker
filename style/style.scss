@@ -246,7 +246,7 @@ h2.title {
 //===========================================================================================
 // MEDIA
 
-@media (max-width: 376px) {
+@media (max-width: 576px) {
 	header {
 		height: 150px;
 		margin-bottom: 0;
@@ -296,7 +296,7 @@ h2.title {
 		}
 	}
 	.add-transaction-panel {
-		display: flex;
+		display: none;
 
 		h2.title {
 			font-size: 20px;
