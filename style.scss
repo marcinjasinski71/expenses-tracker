@@ -164,7 +164,7 @@ header {
 			padding: 10px 20px;
 			border-radius: 5px;
 			border: none;
-			background-color: rgba(255, 255, 255, 0.397);
+			background-color: rgb(255, 255, 255);
 			cursor: pointer;
 		}
 		i {
@@ -249,10 +249,6 @@ header {
 			margin-top: 50px;
 
 			button {
-				padding: 20px 40px;
-				border-radius: 10px;
-				border: none;
-				background-color: rgba(255, 255, 255, 0.664);
 				font-size: 1.1rem;
 			}
 		}
@@ -287,16 +283,6 @@ header {
 		}
 		.title {
 			font-size: 2rem;
-		}
-	}
-	.options {
-		.controls {
-			button {
-				padding: 20px 40px;
-				border-radius: 10px;
-				border: none;
-				background-color: rgba(255, 255, 255, 0.664);
-			}
 		}
 	}
 }

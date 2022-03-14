@@ -211,7 +211,7 @@ header p {
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
-  background-color: rgba(255, 255, 255, 0.397);
+  background-color: white;
   cursor: pointer;
 }
 
@@ -284,10 +284,6 @@ header p {
     margin-top: 50px;
   }
   .options .controls button {
-    padding: 20px 40px;
-    border-radius: 10px;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.664);
     font-size: 1.1rem;
   }
 }
@@ -318,12 +314,6 @@ header p {
   }
   .transactions .title {
     font-size: 2rem;
-  }
-  .options .controls button {
-    padding: 20px 40px;
-    border-radius: 10px;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.664);
   }
 }
 /*# sourceMappingURL=style.css.map */
