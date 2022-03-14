@@ -23,8 +23,36 @@ let categoryIcon;
 let selectedCategory;
 let moneyArr = [0];
 
+// otwieranie panelu -> display flex na niego
 const showPanel = () => {
 	addTransactionPanel.style.display = `flex`;
 };
+// zamykanie -> jw display none + clear inputów
+const closePanel = () => {
+	addTransactionPanel.style.display = `none`;
+	clearInputs();
+};
+// sprawdzamy formularz dodawania nowej transakcji - czy nie jest pusty input + kategoria
+const checkForm = () => {
+	if (
+		nameInput.value !== '' &&
+		amountInput.value !== '' &&
+		categorySelect.value !== 'none'
+	)
+		console.log(`ok`);
+	else {
+		alert(`Wypełnij wszystkie pola !`);
+	}
+};
+// czysciciel inputów, wszelkie zło tego swiata
+const clearInputs = () => {
+	nameInput.value = ``;
+	amountInput.value = ``;
+	categorySelect.selectedIndex = 0;
+};
 
+// ======================================================
+// listenery
 addTransactionBtn.addEventListener(`click`, showPanel);
+cancelBtn.addEventListener(`click`, closePanel);
+saveBtn.addEventListener(`click`, checkForm);
