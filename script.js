@@ -23,16 +23,15 @@ let categoryIcon;
 let selectedCategory;
 let moneyArr = [0];
 
-// otwieranie panelu -> display flex na niego
 const showPanel = () => {
 	addTransactionPanel.style.display = `flex`;
 };
-// zamykanie -> jw display none + clear inputów
+
 const closePanel = () => {
 	addTransactionPanel.style.display = `none`;
 	clearInputs();
 };
-// sprawdzamy formularz dodawania nowej transakcji - czy nie jest pusty input + kategoria
+
 const checkForm = () => {
 	if (
 		nameInput.value !== '' &&
@@ -44,17 +43,16 @@ const checkForm = () => {
 		alert(`Wypełnij wszystkie pola !`);
 	}
 };
-// czysciciel inputów, wszelkie zło tego swiata
+
 const clearInputs = () => {
 	nameInput.value = ``;
 	amountInput.value = ``;
 	categorySelect.selectedIndex = 0;
 };
-// nowa transakcja
+
 const createNewTransaction = () => {
 	const newTransaction = document.createElement(`div`);
 	newTransaction.classList.add(`transaction`);
-	// przypisujemy ID, domyślnie ID = 0
 	newTransaction.setAttribute(`id`, ID);
 
 	checkCategory(selectedCategory);
@@ -65,13 +63,12 @@ const createNewTransaction = () => {
     <button class="delete" onclick="deleteTransaction(${ID})">
     <i class="fas fa-times"></i></button></p>
     `;
-	//  sprawdzamy kwote inputa - jezeli jest wieksza niz zero to dodajemy jako dziecko funkcje newTransaction z klasą income, jezeli jest ponizej zera czyli wydatek to dodajemy newTransaction z klasa expense
+
 	amountInput.value > 0
 		? incomeSection.appendChild(newTransaction) &&
 		  newTransaction.classList.add(`income`)
 		: expensesSection.appendChild(newTransaction) &&
 		  newTransaction.classList.add(`expense`);
-	// dodajemy pieniadze do tablicy
 	moneyArr.push(parseFloat(amountInput.value));
 	countMoney(moneyArr);
 	closePanel();
@@ -83,7 +80,6 @@ const selectCategory = () => {
 	selectedCategory = categorySelect.options[categorySelect.selectedIndex].text;
 };
 
-// sprawdzanie kategorii transakcji
 const checkCategory = transaction => {
 	switch (transaction) {
 		case `[ + ] Przychód`:
@@ -100,13 +96,12 @@ const checkCategory = transaction => {
 			break;
 	}
 };
-// funckcja pokazująca ile mamy dostępnych środków
+
 const countMoney = money => {
 	const newMoney = money.reduce((a, b) => a + b);
 	availableMoney.textContent = `${newMoney}zł`;
 };
 
-// usuwanie transakcji
 const deleteTransaction = id => {
 	const transactionToDelete = document.getElementById(id);
 	const transactionAmount = parseFloat(
@@ -116,7 +111,6 @@ const deleteTransaction = id => {
 
 	moneyArr.splice(indexOfTransaction, 1);
 
-	// operator warunkowy
 	transactionToDelete.classList.contains(`income`)
 		? incomeSection.removeChild(transactionToDelete)
 		: expensesSection.removeChild(transactionToDelete);
