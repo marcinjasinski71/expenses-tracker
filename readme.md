@@ -6,3 +6,6 @@
 4. W razie potrzeby możesz usunąć jednym kliknięciem wszystkie dochody i wydatki.
 
 > Marcin Jasiński 2022
+
+
+LIVE : https://marcinjasinski71.github.io/kalkulator-wydatkow/
